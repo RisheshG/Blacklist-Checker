@@ -1,0 +1,314 @@
+/* App.css */
+
+/* General Layout and Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #ecf0f1;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.App {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  margin-bottom: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background: linear-gradient(135deg, #1c1c1c 25%, #282c34 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #61dafb;
+  transition: all 0.3s ease-in-out;
+}
+
+.App-header:hover {
+  transform: scale(1.02);
+  border-color: #21a1f1;
+}
+
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.App-link:hover {
+  color: #fff;
+  background: #61dafb;
+  box-shadow: 0px 5px 15px rgba(97, 218, 251, 0.6);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Styling */
+form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form:hover {
+  transform: translateY(-5px);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #61dafb;
+  border-radius: 50px;
+  background: #333;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #21a1f1;
+  background: #1c1c1c;
+}
+
+button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background: #61dafb;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #21a1f1;
+  box-shadow: 0px 5px 15px rgba(33, 161, 241, 0.6);
+}
+
+/* Error Message Styling */
+p {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Blacklist Table Styling */
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #61dafb;
+  color: #fff;
+  font-size: 18px;
+}
+
+thead th {
+  padding: 15px 10px;
+}
+
+tbody tr {
+  transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(97, 218, 251, 0.2);
+}
+
+tbody td {
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+tbody td:first-child {
+  border-left: none;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #1c1c1c 25%, #282c34 100%);
+  padding: 20px;
+  border-top: 2px solid #61dafb;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  color: #bdc3c7;
+}
+
+/* Advanced Button Styling */
+.advanced-button {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: #1abc9c;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.advanced-button:hover {
+  background: #16a085;
+  transform: translateY(-3px);
+}
+
+/* Advanced Animations */
+@keyframes button-hover {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+button {
+  background-size: 200%;
+  animation: button-hover 4s ease infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    padding: 20px;
+    font-size: calc(8px + 2vmin);
+  }
+
+  input[type="text"],
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table thead {
+    font-size: 16px;
+  }
+
+  table tbody td {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App-header {
+    padding: 10px;
+    font-size: calc(6px + 2vmin);
+  }
+
+  input[type="text"],
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table thead {
+    font-size: 14px;
+  }
+
+  table tbody td {
+    font-size: 12px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em; /* Make the footer text smaller for a thinner appearance */
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px; /* Reduce padding for a thinner footer */
+  background: rgba(0, 0, 0, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  margin-top: auto; /* Pushes footer to the bottom */
+  backdrop-filter: blur(12px);
+}
+
+footer a {
+  color: #d34836;
+  text-decoration: underline;
+}
